@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG NexaTech | Tecnologia e Impacto Social</title>
+    <style>
+        :root {
+            --primary: #c891f3;
+            --secondary: #caacde;
+            --bg-creme: #fffdf5;
+            --text: #4a4a4a;
+            --white: #ffffff;
+            --accent: #6c5ce7;
+            --canva: #00c4cc;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-creme);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Header e Navegação */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+
+        header h1 { font-size: 3.5rem; margin: 0; display: flex; align-items: center; justify-content: center; gap: 15px; }
+        
+        nav {
+            background: var(--white);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+
+        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SEÇÃO HISTÓRIA */
+        .story-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.1);
+            border-left: 8px solid var(--primary);
+        }
+
+        .story-card h2 { color: var(--accent); margin-top: 0; }
+        .quote {
+            font-style: italic;
+            background: #f7f0fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid var(--secondary);
+        }
+
+        /* GRID DE CURSOS */
+        .grid-cursos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card-curso {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid var(--secondary);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-curso:hover { transform: translateY(-5px); border-color: var(--primary); }
+        
+        .card-curso h3 { margin-top: 0; color: var(--accent); }
+        
+        .tag-horas {
+            font-size: 0.75rem;
+            background: var(--secondary);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            width: fit-content;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .especial-canva { border: 2px solid var(--canva); }
+        .especial-canva h3 { color: var(--canva); }
+
+        /* FORMULÁRIO */
+        .form-section {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 4rem;
+            border: 2px solid var(--secondary);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .btn-enviar {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-enviar:hover { background: var(--accent); }
+
+        footer { text-align: center; padding: 3rem; color: #888; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>NexaTech Social</h1>
+    <p>Transformando o "não consigo" em "eu fiz".</p>
+</header>
+
+<nav>
+    <a href="#nossa-historia">Nossa História</a>
+    <a href="#cursos">Cursos Gratuitos</a>
+    <a href="#inscricao">Inscrição</a>
+</nav>
+
+<div class="container">
+
+    <section id="nossa-historia" class="story-card">
+        <h2>Por que existimos?</h2>
+        <p>A NexaTech Social nasceu de uma conversa de corredor. Em 2024, o Tiago, que cuidava da manutenção da nossa sede, confessou que achava que o mundo da tecnologia era um "clube fechado" para pessoas como ele.</p>
+        
+        <div class="quote">
+            "Eu via os códigos nas telas e pareciam muros. Eu queria aprender a construir, mas não sabia por onde começar." — Tiago, nosso 1º Estagiário.
+        </div>
+
+        <p>Aquilo mudou nossa visão. Tiago foi convidado para um estágio experimental, aprendeu rápido e hoje é desenvolvedor sênior. Mas ele não podia ser a única exceção. Criamos a ONG para abrir as portas que estavam trancadas, oferecendo gratuitamente o conhecimento que move o mundo.</p>
+    </section>
+
+    <section id="cursos">
+        <h2 style="text-align: center; margin-bottom: 30px;">O que você pode aprender?</h2>
+        <div class="grid-cursos">
+            
+            <div class="card-curso especial-canva">
+                <span class="tag-horas" style="background: var(--canva);">30h</span>
+                <h3>Design no Canva</h3>
+                <p>Crie logos, posts e materiais visuais incríveis. Perfeito para começar a ganhar dinheiro como freelancer.</p>
+            </div>
+
+            <div class="card-curso">
+                <span class="tag-horas">40h</span>
+                <h3>Lógica de Programação</h3>
+                <p>O curso que o Tiago fez primeiro. Aprenda a base de toda linguagem de programação.</p>
+            </div>
+
+            <div class="card-curso">
+                <span class="tag-horas">60h</span>
+                <h3>Desenvolvimento Web</h3>
+                <p>Aprenda HTML e CSS para criar sites profissionais do absoluto zero.</p>
+            </div>
+
+            <div class="card-curso">
+                <span class="tag-horas">80h</span>
+                <h3>JavaScript Master</h3>
+                <p>Dê inteligência e interatividade aos sites. A linguagem mais pedida pelas empresas.</p>
+            </div>
+
+            <div class="card-curso">
+                <span class="tag-horas">50h</span>
+                <h3>IA para Iniciantes</h3>
+                <p>Como usar ferramentas de Inteligência Artificial para acelerar seus estudos e carreira.</p>
+            </div>
+
+            <div class="card-curso">
+                <span class="tag-horas">70h</span>
+                <h3>Python & Dados</h3>
+                <p>A porta de entrada para quem quer trabalhar com análise de informações e automação.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="inscricao" class="form-section">
+        <h2 style="text-align: center;">Mude sua vida agora</h2>
+        <form onsubmit="event.preventDefault(); alert('Inscrição enviada! Nossa equipe entrará em contato com você via WhatsApp.');">
+            <label>Seu Nome:</label>
+            <input type="text" placeholder="Nome completo" required>
+            
+            <label>E-mail:</label>
+            <input type="email" placeholder="seu@email.com" required>
+            
+            <label>Qual curso você quer fazer primeiro?</label>
+            <select required>
+                <option value="">Selecione um curso...</option>
+                <option>Design no Canva</option>
+                <option>Lógica de Programação</option>
+                <option>Desenvolvimento Web</option>
+                <option>JavaScript Master</option>
+                <option>IA para Iniciantes</option>
+                <option>Python & Dados</option>
+            </select>
+
+            <label>Conte um pouco sobre seu sonho:</label>
+            <textarea rows="3" placeholder="O que você espera conquistar com esse curso?"></textarea>
+
+            <button type="submit" class="btn-enviar">Garantir Minha Vaga Gratuita</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 NexaTech Social | Santa Maria - RS</p>
+    <p>Inspirado pela história do Tiago.</p>
+</footer>
+
+</body>
+</html
